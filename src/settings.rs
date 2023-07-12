@@ -31,6 +31,11 @@ pub struct Settings<Flags> {
     // /// [`Application`]: crate::Application
     // pub try_opengles_first: bool,
     pub iced_baseview: IcedBaseviewSettings,
+
+    /// If set to true, the renderer will try to perform antialiasing for some primitives.
+    /// Enabling it can produce a smoother result in some widgets, like the Canvas, at a performance cost.
+    /// By default, it is disabled.
+    pub antialiasing: bool,
 }
 
 /// Any settings specific to `iced_baseview`.

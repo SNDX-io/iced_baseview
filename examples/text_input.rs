@@ -26,6 +26,7 @@ fn main() {
             always_redraw: true,
         },
         flags: (),
+        antialiasing: true,
     };
 
     open_blocking::<MyProgram>(settings);
@@ -71,7 +72,7 @@ impl Application for MyProgram {
 
     fn view(&self) -> Element<'_, Self::Message, Self::Theme> {
         let text_input_widget =
-            TextInput::new("Hello!", &self.text_input_str, Message::TextInputChanged);
+            TextInput::new("Hello!", &self.text_input_str);
 
         let content = Column::new()
             .width(Length::Fill)

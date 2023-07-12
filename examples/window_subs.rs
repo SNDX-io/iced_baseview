@@ -29,6 +29,7 @@ fn main() {
             always_redraw: true,
         },
         flags: (),
+        antialiasing: true,
     };
 
     open_blocking::<MyProgram>(settings);
